@@ -5,121 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHq6OUVkpP4RmYp1Uq8f8xgUpFwO6zMQ3TfiF6uGQU6dL9q4mT05UjL2RnnNBUKivTfi6DfA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Roboto', sans-serif;
-            background-color: #fef6e4;
-            color: #403d39;
-        }
-        header {
-            background-color: #855e67;
-            color: #fef6e4;
-            text-align: center;
-            padding: 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        .contact-links {
-            margin-top: 10px;
-        }
-        .contact-links a {
-            margin: 0 15px;
-            color: #fef6e4;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
-        .contact-links a:hover {
-            text-decoration: underline;
-        }
-        nav {
-            margin-top: 15px;
-        }
-        nav a {
-            color: #fef6e4;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            margin-bottom: 50px;
-        }
-        h2 {
-            color: #492d34;
-            border-bottom: 2px solid #855e67;
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            justify-content: center;
-        }
-        .card {
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            text-align: left;
-        }
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .card h3 {
-            margin-top: 0;
-            color: #403d39;
-        }
-        .card a {
-            text-decoration: none;
-            color: sandybrown;
-        }
-        .card a:hover {
-            text-decoration: underline;
-        }
-        .certificate iframe {
-            width: 100%;
-            max-width: 280px;
-            height: 150px;
-            border: none;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #855e67;
-            color: #fef6e4;
-        }
-        footer a {
-            color: #fef6e4;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        .contact-item {
-            margin-bottom: 10px;
-        }
-        .contact-item i {
-            margin-right: 10px;
-            color: #855e67;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHq6OUVkpP4RmYp1Uq8f8xgUpFwO6zMQ3TfiF6uGQU6dL9q4mT05UjFQ+Q5Q3lj5vIrkD9g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -130,48 +17,71 @@
             <a href="mailto:delivosnikos@gmail.com"><i class="fas fa-envelope"></i> Email</a>
         </div>
         <nav>
+            <a href="#about">About Me</a>
             <a href="#projects">Projects</a>
             <a href="#certificates">Certificates</a>
-            <a href="#about">About Me</a>
         </nav>
     </header>
     <div class="container">
-        <section id="projects">
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I'm a sophomore Computer Science student at Democritus University of Thrace with aspirations to become a full-stack developer. In addition to my academic and professional pursuits, I have a passion for video games and music. My projects reflect my dedication to learning and applying my skills in practical and creative ways.</p>
+        </section>
+        <section id="projects" class="section">
             <h2>Projects</h2>
             <div class="grid">
                 <div class="card">
-                    <h3><a href="https://github.com/NikosDeliv/GlimmerDex" target="_blank">GlimmerDex - Pokemon Encounter Counter</a></h3>
-                    <p>A Shiny hunting companion app.</p>
+                    <img src="assets/GlimmerDexIcon.png" alt="GlimmerDex Project Image">
+                    <h3>GlimmerDex - Pokemon Encounter Counter</h3>
+                    <p>A Shiny hunting companion app that helps players track their encounter counts while shiny hunting in Pokémon games.</p>
+                    <div class="links">
+                        <a href="https://github.com/NikosDeliv/GlimmerDex" target="_blank">Source Code</a>
+                    </div>
+                    <div class="technologies">C#</div>
                 </div>
                 <div class="card">
-                    <h3><a href="https://github.com/NikosDeliv/Bowtide" target="_blank">Bowtide</a></h3>
-                    <p>A Terraria mod still in development. <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3351559462" target="_blank">Steam Workshop Page</a></p>
+                    <img src="assets/BowtideIcon.png" alt="Bowtide Project Image">
+                    <h3>Bowtide</h3>
+                    <p>A Terraria mod developed with C#. It introduces new gameplay elements and items to enhance the gaming experience in Terraria.</p>
+                    <div class="links">
+                        <a href="https://github.com/NikosDeliv/Bowtide" target="_blank">Source Code</a>
+                        <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3351559462" target="_blank">Steam Workshop</a>
+                    </div>
+                    <div class="technologies">C#, TmodLoader</div>
                 </div>
                 <div class="card">
-                    <h3><a href="https://github.com/NikosDeliv/Morse-Code-Translator" target="_blank">Morse Code Translator</a></h3>
-                    <p>Convert text to morse and vice versa. <a href="https://nikosdeliv.github.io/Morse-Code-Translator/" target="_blank">Try it!</a></p>
+                    <img src="assets/MorseIcon.png" alt="Morse Code Translator Project Image">
+                    <h3>Morse Code Translator</h3>
+                    <p>Convert text to morse and vice versa.</p>
+                    <div class="links">
+                        <a href="https://github.com/NikosDeliv/Morse-Code-Translator" target="_blank">Source Code</a>
+                        <a href="https://nikosdeliv.github.io/Morse-Code-Translator/" target="_blank">Live Page</a>
+                    </div>
+                    <div class="technologies">JavaScript, HTML, CSS</div>
                 </div>
                 <div class="card">
-                    <h3><a href="https://github.com/NikosDeliv/Ultimate-Rock-Paper-Scissors" target="_blank">Ultimate Rock Paper Scissors</a></h3>
-                    <p>A small fun game to kill time. <a href="https://nikosdeliv.github.io/Ultimate-Rock-Paper-Scissors/" target="_blank">Try it!</a></p>
+                    <img src="assets/URPSIcon.png" alt="Ultimate Rock Paper Scissors Project Image">
+                    <h3>Ultimate Rock Paper Scissors</h3>
+                    <p>A fun game to kill time.</p>
+                    <div class="links">
+                        <a href="https://github.com/NikosDeliv/Ultimate-Rock-Paper-Scissors" target="_blank">Source Code</a>
+                        <a href="https://nikosdeliv.github.io/Ultimate-Rock-Paper-Scissors/" target="_blank">Live Page</a>
+                    </div>
+                    <div class="technologies">JavaScript, HTML, CSS</div>
                 </div>
             </div>
         </section>
-        <section id="certificates">
+        <section id="certificates" class="section">
             <h2>Certificates</h2>
             <div class="grid">
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0bf7c814-1ac8-4eb9-aeae-4676f35b7a53" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="53a4946f-e053-4906-b78e-aea53a44bd4c" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0bf7c814-1ac8-4eb9-aeae-4676f35b7a53" data-share-badge-host="https://www.credly.com"></div>
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="53a4946f-e053-4906-b78e-aea53a44bd4c" data-share-badge-host="https://www.credly.com"></div>
             </div>
         </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a sophomore Computer Science student at Democritus University of Thrace with aspirations to become a full-stack developer. In addition to my academic and professional pursuits, I have a hobby in game development/modding.</p>
-        </section>
-       
     </div>
     <footer>
         <p>&copy; 2024 Nikos Delivos.</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>

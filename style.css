@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+}
+
+header {
+    background-color: #4b5563;
+    color: #f3f4f6;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.contact-links {
+    margin-top: 10px;
+}
+
+.contact-links a {
+    margin: 0 15px;
+    color: #f3f4f6;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: #a3955e;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    color: #f3f4f6;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a3955e;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    padding-top: 140px; /* Adjust for fixed header */
+}
+
+.section {
+    margin-bottom: 50px;
+    scroll-margin-top: 150px; /* Ensure section header is not covered by the fixed header */
+}
+
+h2 {
+    color: #1f2937;
+    border-bottom: 2px solid #4b5563;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: left;
+    position: relative;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #1f2937;
+}
+
+.card p {
+    color: #4b5563;
+}
+
+.technologies {
+    background-color: #e5e7eb;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #1f2937;
+    margin-top: 15px;
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #a3955e;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4b5563;
+    color: #f3f4f6;
+    transition: background-color 0.3s ease;
+}
+
+footer:hover {
+    background-color: #374151;
+}
+
+footer a {
+    color: #f3f4f6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+

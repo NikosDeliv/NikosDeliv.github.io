@@ -205,4 +205,5 @@ footer a {
 
 .technologies-line li {
     list-style: none;
+    font-size: 2rem; /* Increase the size of the icons */
 }

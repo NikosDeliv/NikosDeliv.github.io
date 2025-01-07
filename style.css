@@ -194,3 +194,15 @@ footer a {
     margin-right: 10px;
     color: #4b5563;
 }
+
+/* Additional CSS for technologies in lines */
+.technologies-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.technologies-line li {
+    list-style: none;
+}

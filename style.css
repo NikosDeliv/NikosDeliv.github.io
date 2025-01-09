@@ -60,7 +60,7 @@ nav a:hover {
     margin: 0 auto;
     padding: 20px;
     text-align: center;
-    padding-top: 140px; /* Adjust for fixed header */
+    padding-top: 140px; 
 }
 
 .section {
@@ -192,10 +192,9 @@ footer a {
 
 .category ul li i {
     margin-right: 10px;
-    color: #4b5563;
 }
 
-/* Additional CSS for technologies in lines */
+
 .technologies-line {
     display: flex;
     flex-wrap: wrap;
@@ -205,5 +204,5 @@ footer a {
 
 .technologies-line li {
     list-style: none;
-    font-size: 2rem; /* Increase the size of the icons */
+    font-size: 2rem; 
 }

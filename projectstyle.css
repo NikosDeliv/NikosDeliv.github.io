@@ -1,0 +1,75 @@
+body {
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    background-color: #f5f0e1;
+    color: #2c2c2c;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background: #3d454d;
+    padding: 25px;
+    color: white;
+    position: relative;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+    background: #8b6f47;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.button:hover {
+    background: #5c482c;
+}
+
+main {
+    padding-top: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+}
+
+.project {
+    background: #fff8e1;
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.tech {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}

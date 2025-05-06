@@ -1,4 +1,4 @@
-/* Additional styles for the Pixel Art Gallery page */
+
  :root {
     --gallery-bg: #121212;
     --card-bg: #1e1e1e;
@@ -271,9 +271,9 @@ body {
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 90%; /* Adjusted for better responsiveness */
+    max-width: 90%; 
     max-height: 90%;
-    border-radius: 10px; /* Optional for rounded corners */
+    border-radius: 10px; 
 }
 
 .modal-close {

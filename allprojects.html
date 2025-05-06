@@ -1,110 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>All Projects | Nikos Delivos</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Museum</title>
+    <meta name="description" content="All projects by Nikos Delivos - Computer Science Student & Developer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="projectstyle.css">
 </head>
 <body>
-    <header>
-        <h1>Project Archive</h1>
-        <p>Explore my collection of projects.</p>
-        <a href="index.html" class="button"> Back to Main Page</a>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Nikos Delivos</a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="navLinks" class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="#" class="active">Projects</a>
+                <a href="index.html#certificates">Certificates</a>
+                <a href="pixelart.html">Pixel Art</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <div class="grid">
-            <section class="project">
-                <h2>GlimmerDex</h2>
-                <p class="description">Pokemon Shiny hunting companion app to help you keep track of your hunts as well as see your current collection</p>
-                <div class="links">
-                    <a href="https://github.com/NikosDeliv/GlimmerDex" target="_blank">Source Code</a>
-                </div>
-                <p class="tech">Technologies Used: C#</p>
-            </section>
-    
-            <section class="project">
-                <h2>Bowtide</h2>
-                <p class="description">A work in progress terraria mod that adds various bows, arrows and accessories</p>
-                <div class="links">
-                </div>
-                <p class="tech"> Technologies Used :C#, TmodLoader</p>
-            </section>
-    
-            <section class="project">
-                <h2>Procedural Dungeon Generator</h2>
-                <p class="description">a tool to help with generating procedural dungeons that fit your needs</p>
-                <div class="links">
-                    <a href="https://github.com/NikosDeliv/ProcedurallyGeneratedDungeon" target="_blank">Source Code</a>
-                </div>
-                <p class="tech"> Technologies Used: C#</p>
-            </section>
-    
-            <section class="project">
-                <h2>Morse Code Translator</h2>
-                <p class="description">A tool that translates morse code and vice versa, you can also listen to the morse code output</p>
-                <div class="links">
-                    <a href="https://github.com/NikosDeliv/Morse-Code-Translator" target="_blank">Source Code</a>
-                    <a href="https://nikosdeliv.github.io/Morse-Code-Translator/" target="_blank">Live Page</a>
-                </div>
-                <p class="tech"> Technologies Used: HTML, CSS, JavaScript</p>
-            </section>
-    
-            <section class="project">
-                <h2>Ultimate Rock Paper Scissors</h2>
-                <p class="description">Rock Paper Scissors but with a twist</p>
-                <div class="links">
-                    <a href="https://github.com/NikosDeliv/Ultimate-Rock-Paper-Scissors" target="_blank">Source Code</a>
-                            <a href="https://nikosdeliv.github.io/Ultimate-Rock-Paper-Scissors/" target="_blank">Live Page</a>
-                </div>
-                <p class="tech"> Technologies Used: HTML, CSS, JavaScript </p>
-            </section>
-    
-            <section class="project">
-                <h2> Are You Silly </h2>
-                <p class="description">Just a silly joke </p>
-                <div class="links">
-                    <a href="https://github.com/NikosDeliv/Are-You-Silly" target="_blank">Source Code</a>
-                    <a href="https://nikosdeliv.github.io/Are-You-Silly/" target="_blank">Live Page</a>
-                </div>
-                <p class="tech"> Technologies Used: HTML, CSS, JavaScript </p>
-            </section>
-    
-            <section class="project">
-                <h2>Digital Frame</h2>
-                <p class="description">A script that replicates the digital frame that displayed pictures and changed them every few seconds</p>
-                <div class="links">
-                    <a href="https://github.com/NikosDeliv/DigitalFrame" target="_blank">Source Code</a>
-                </div>
-                <p class="tech"> Technologies Used: Python</p>
-            </section>
-    
-            <section class="project">
-                <h2>Simple Quiz | Uni Assignment</h2>
-                <p class="description">A simple quiz I had to make for an assigmnent, still including it cause it taught me lots</p>
-                <div class="links">
-                    <a href="https://github.com/NikosDeliv/Quiz_JavaFx" target="_blank">Source Code</a>
-                </div>
-                <p class="tech"> Technologies Used: Java</p>
-            </section>
-
-            <section class="project">
-                <h2>Personal Site</h2>
-                <p class="description">A site to display information about me like my skills and various hobbies. Theres no need for links because youre already in the site</p>
-                <p class="tech"> Technologies Used:  HTML, CSS, JavaScript</p>
-            </section>
-            
-            <section class="project">
-                <h2>Scoundrel A Dungeon Crawler Card Game</h2>
-                <p class="description">game based on the solitaire dungeon crawler "Scoundrel"</p>
-                <div class="links">
-                    <a href="https://github.com/NikosDeliv/ScoundrelDungeonCrawler" target="_blank">Source Code</a>
-                </div>
-                <p class="tech"> Technologies Used: C#</p>
-            </section>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>All Projects</h1>
+            <p>A collection of all my programming and development projects</p>
         </div>
-       
-    </main>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section all-projects">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-buttons">
+                    <button class="filter-button active" data-filter="all">All</button>
+                    <button class="filter-button" data-filter=".net">C# / .NET</button>
+                    <button class="filter-button" data-filter="web">Web Development</button>
+                    <button class="filter-button" data-filter="game">Game Development</button>
+                    <button class="filter-button" data-filter="python">Python</button>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category=".net">
+                    <div class="project-image">
+                        <img src="assets/GlimmerDexIcon.png" alt="GlimmerDex Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>GlimmerDex</h3>
+                        <p>A Shiny hunting companion app that helps players track their encounter counts while shiny hunting in Pokémon games.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">.NET</span>
+                            <span class="project-tag">Desktop App</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/NikosDeliv/GlimmerDex" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://nico18n3.itch.io/glimmerdex" target="_blank"><i class="fas fa-gamepad"></i> Download</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card" data-category=".net game">
+                    <div class="project-image">
+                        <img src="assets/PGDIcon.png" alt="Procedurally Generated Dungeons">
+                    </div>
+                    <div class="project-content">
+                        <h3>Procedurally Generated Dungeons</h3>
+                        <p>A tool to help you generate new dungeon layouts for your game development needs. Implements multiple procedural generation algorithms.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">Algorithms</span>
+                            <span class="project-tag">Game Dev</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/NikosDeliv/ProcedurallyGeneratedDungeon" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="assets/MorseIcon.png" alt="Morse Code Translator">
+                    </div>
+                    <div class="project-content">
+                        <h3>Morse Code Translator</h3>
+                        <p>Convert text to morse code and vice versa with audio playback functionality. Features a clean, responsive interface.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/NikosDeliv/Morse-Code-Translator" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://nikosdeliv.github.io/Morse-Code-Translator/" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="/assets/URPSIcon.png" alt="Ultimate Rock Paper Scissors">
+                    </div>
+                    <div class="project-content">
+                        <h3>Ultimate Rock Paper Scissors</h3>
+                        <p>Rock Paper Scissors game with a twist - featuring expanded gameplay elements and an extended set of choices.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/NikosDeliv/Ultimate-Rock-Paper-Scissors" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="https://nikosdeliv.github.io/Ultimate-Rock-Paper-Scissors/" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card" data-category=".net game">
+                    <div class="project-image">
+                        <img src="/assets/BowtideIcon.png" alt="Bowtide Terraria Mod">
+                    </div>
+                    <div class="project-content">
+                        <h3>Bowtide</h3>
+                        <p>A work-in-progress Terraria mod that adds various bows, arrows, and accessories to the game. Designed to enhance the ranged gameplay.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">TmodLoader</span>
+                            <span class="project-tag">Game Mod</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="disabled"><i class="fas fa-code-branch"></i> Work in Progress</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card" data-category="python">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/200" alt="Digital Frame">
+                    </div>
+                    <div class="project-content">
+                        <h3>Digital Frame</h3>
+                        <p>A script that replicates a digital photo frame, displaying pictures and changing them every few seconds. Customizable transition effects.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Python</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/NikosDeliv/DigitalFrame" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card" data-category=".net">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/200" alt="Scoundrel">
+                    </div>
+                    <div class="project-content">
+                        <h3>Scoundrel - Dungeon Crawler</h3>
+                        <p>A game played on the PCs console based on the card game Scoundrel.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">C#</span>
+                            <span class="project-tag">.NET Core</span>
+                            <span class="project-tag">WPF</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/NikosDeliv/ScoundrelDungeonCrawler" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="/api/placeholder/400/200" alt="Personal Portfolio Website">
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Portfolio Website</h3>
+                        <p>This portfolio website showcasing my projects, skills, and artwork. Built with responsive design principles.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/NikosDeliv/portfolio" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="#">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/NikosDeliv" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nikosdelivos" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:delivosnikos@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 Nikos Delivos. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Project filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    projectCards.forEach(card => {
+                        const categories = card.getAttribute('data-category');
+                        
+                        if (filterValue === 'all' || categories.includes(filterValue)) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

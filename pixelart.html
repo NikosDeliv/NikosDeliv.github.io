@@ -1,58 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Pixel Art - Nikos Delivos</title>
+    <title>Pixel Art Gallery | Nikos Delivos</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pixel Art Gallery of Nikos Delivos - Computer Science Student & Developer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="pastyle.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const artPieces = document.querySelectorAll('.art-piece');
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const closeModal = document.querySelector('.modal-close');
+
+            // Filtering functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // Filter art pieces based on selected category
+                    artPieces.forEach(piece => {
+                        const category = piece.getAttribute('data-category');
+
+                        if (filterValue === 'all' || category === filterValue) {
+                            piece.style.display = 'block';
+                            setTimeout(() => {
+                                piece.style.opacity = '1';
+                                piece.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            piece.style.opacity = '0';
+                            piece.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                piece.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // Modal functionality for image display
+            document.querySelectorAll('.art-image img').forEach(img => {
+                img.addEventListener('click', function () {
+                    const fullSizeImg = this.closest('.art-piece').getAttribute('data-img');
+                    if (fullSizeImg) {
+                        modal.style.display = 'block';
+                        modalImage.src = fullSizeImg;
+                    }
+                });
+            });
+
+            closeModal.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Pixel Art Gallery</h1>
-        <nav>
-            <a href="index.html">Back to Main Page</a>
-        </nav>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Nikos Delivos</a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="navLinks" class="nav-links">
+                <a href="index.html">Home</a>
+            </nav>
+        </div>
     </header>
-    <div class="gallery">
-        <div class="art-piece">
-            <img src="assets//PixelArt/Bowtide_Spritesheet.png" alt="Bowtide Sprites">
-            <p>Bowtide Sprites</p>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Pixel Art Gallery</h1>
+            <p>A collection of pixel art works created by Nikos Delivos</p>
         </div>
-        <div class="art-piece">
-            <img src="assets/PixelArt/Sableye.png" alt="Sableye">
-            <p>Sableye</p>
-        </div>
-        <div class="art-piece">
-            <img src="assets/PixelArt/El_Gato.png" alt="Cat">
-            <p>Cat</p>
-        </div>
-        <div class="art-piece">
-            <img src="assets/PixelArt/EmRanNuz_Final.png" alt="Emerald Randomized Nuzlocke">
-            <p>Emerald Randomized Nuzlocke</p>
-        </div>
-        <div class="art-piece">
-            <img src="assets/PixelArt/Commission.png" alt="Sprite art for Friend">
-            <p>Sprite art for Friend</p>
-        </div>
-        <div class="art-piece">
-            <img src="assets/PixelArt/Commission2.png" alt="Sprite art for Friend">
-            <p>Sprite art for Friend</p>
-        </div>
-        <div class="art-piece">
-            <img src="assets/PixelArt/Commission3.png" alt="Sprite art for Friend">
-            <p>Sprite art for Friend</p>
-        </div>
-        <div class="art-piece">
-            <img src="assets/PixelArt/PlagueDoctor.png" alt="Plague Doctor">
-            <p>Plague Doctor / My pixel art version of art I found online</p>
-        </div>
+    </section>
+
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
     </div>
-    <!-- Modal -->
-    <div class="modal" id="imageModal">
-        <span class="close" id="closeModal">&times;</span>
-        <img class="modal-content" id="modalImage" src="" alt="">
-        <div id="caption"></div>
-    </div>  
-    <script src="script.js"></script>  
+
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <div class="filter-buttons">
+                    <button class="filter-button active" data-filter="all">All</button>
+                    <button class="filter-button" data-filter="pokemon">Pokémon</button>
+                    <button class="filter-button" data-filter="character">Characters</button>
+                    <button class="filter-button" data-filter="game">Game Assets</button>
+                    <button class="filter-button" data-filter="other">Other</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- Art Piece 1 -->
+                <div class="art-piece" data-img="assets/PixelArt/Bowtide_Spritesheet.png" data-category="game">
+                    <div class="art-image">
+                        <img src="assets/PixelArt/Bowtide_Spritesheet.png" alt="Bowtide Sprites">
+                    </div>
+                    <div class="art-content">
+                        <h3>Bowtide Sprites</h3>
+                        <p>A spritesheet containing various bows, arrows, and accessories for the Bowtide Terraria mod.</p>
+                        <div class="art-tags">
+                            <span class="art-tag">Game Assets</span>
+                            <span class="art-tag">Terraria</span>
+                            <span class="art-tag">Weapons</span>
+                        </div>
+                        <div class="art-meta">
+                            <span><i class="fas fa-paint-brush"></i> Aseprite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Piece 2 -->
+                <div class="art-piece" data-img="assets/PixelArt/Sableye.png" data-category="pokemon">
+                    <div class="art-image">
+                        <img src="assets/PixelArt/Sableye.png" alt="Sableye">
+                    </div>
+                    <div class="art-content">
+                        <h3>Sableye</h3>
+                        <p>A pixel rendition of the Pokémon Sableye, capturing its mischievous nature and gem-like eyes.</p>
+                        <div class="art-tags">
+                            <span class="art-tag">Pokémon</span>
+                            <span class="art-tag">Character</span>
+                            <span class="art-tag">Fan Art</span>
+                        </div>
+                        <div class="art-meta">
+                            <span><i class="fas fa-paint-brush"></i> Aseprite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Piece 3 -->
+                <div class="art-piece" data-img="assets/PixelArt/El_Gato.png" data-category="other">
+                    <div class="art-image">
+                        <img src="assets/PixelArt/El_Gato.png" alt="Cat">
+                    </div>
+                    <div class="art-content">
+                        <h3>El Gato</h3>
+                        <p>A simple yet charming pixel art cat, created as a practice in limited color palette techniques.</p>
+                        <div class="art-tags">
+                            <span class="art-tag">Animal</span>
+                            <span class="art-tag">Practice</span>
+                            <span class="art-tag">Limited Palette</span>
+                        </div>
+                        <div class="art-meta">
+                            <span><i class="fas fa-paint-brush"></i> Aseprite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Piece 4 -->
+                <div class="art-piece" data-img="assets/PixelArt/EmRanNuz_Final.png" data-category="pokemon">
+                    <div class="art-image">
+                        <img src="assets/PixelArt/EmRanNuz_Final.png" alt="Emerald Randomized Nuzlocke">
+                    </div>
+                    <div class="art-content">
+                        <h3>Emerald Randomized Nuzlocke</h3>
+                        <p>A memorial piece showcasing the team from a completed Pokémon Emerald randomized nuzlocke challenge.</p>
+                        <div class="art-tags">
+                            <span class="art-tag">Pokémon</span>
+                            <span class="art-tag">Nuzlocke</span>
+                            <span class="art-tag">Team Art</span>
+                        </div>
+                        <div class="art-meta">
+                            <span><i class="fas fa-paint-brush"></i> Aseprite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Piece 5 -->
+                <div class="art-piece" data-img="assets/PixelArt/Commission.png" data-category="character">
+                    <div class="art-image">
+                        <img src="assets/PixelArt/Commission.png" alt="Sprite art for Friend">
+                    </div>
+                    <div class="art-content">
+                        <h3>Character Commission</h3>
+                        <p>Some of a friend's favorite Pokémon.</p>
+                        <div class="art-tags">
+                            <span class="art-tag">Character</span>
+                            <span class="art-tag">Commission</span>
+                            <span class="art-tag">Pokémon</span>
+                        </div>
+                        <div class="art-meta">
+                            <span><i class="fas fa-paint-brush"></i> Aseprite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Piece 6 -->
+                <div class="art-piece" data-img="assets/PixelArt/PlagueDoctor.png" data-category="character">
+                    <div class="art-image">
+                        <img src="assets/PixelArt/PlagueDoctor.png" alt="Plague Doctor">
+                    </div>
+                    <div class="art-content">
+                        <h3>Plague Doctor</h3>
+                        <p>A detailed pixel art rendering of a plague doctor, emphasizing the iconic mask and historical attire.</p>
+                        <div class="art-tags">
+                            <span class="art-tag">Character</span>
+                            <span class="art-tag">Historical</span>
+                            <span class="art-tag">Dark Theme</span>
+                        </div>
+                        <div class="art-meta">
+                            <span><i class="fas fa-paint-brush"></i> Aseprite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Piece 7 -->
+                <div class="art-piece" data-img="assets/PixelArt/Commission2.png" data-category="pokemon">
+                    <div class="art-image">
+                        <img src="assets/PixelArt/Commission2.png" alt="Commission2">
+                    </div>
+                    <div class="art-content">
+                        <h3>Commission for a friend</h3>
+                        <p>It depicts some of a friend's favorite Pokémon.</p>
+                        <div class="art-tags">
+                            <span class="art-tag">Character</span>
+                            <span class="art-tag">Commission</span>
+                            <span class="art-tag">Pokémon</span>
+                        </div>
+                        <div class="art-meta">
+                            <span><i class="fas fa-paint-brush"></i> Aseprite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Art Piece 8 -->
+                <div class="art-piece" data-img="assets/PixelArt/Commission3.png" data-category="pokemon">
+                    <div class="art-image">
+                        <img src="assets/PixelArt/Commission3.png" alt="Commission3">
+                    </div>
+                    <div class="art-content">
+                        <h3>Commission for a friend</h3>
+                        <p>It depicts some of a friend's favorite Pokémon.</p>
+                        <div class="art-tags">
+                            <span class="art-tag">Pokémon</span>
+                            <span class="art-tag">Character</span>
+                            <span class="art-tag">Commission</span>
+                        </div>
+                        <div class="art-meta">
+                            <span><i class="fas fa-paint-brush"></i> Aseprite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Image Display -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 </body>
 </html>

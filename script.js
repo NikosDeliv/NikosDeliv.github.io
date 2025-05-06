@@ -1,29 +1,84 @@
-// Get all image elements inside the art pieces
-const artPieceImages = document.querySelectorAll('.art-piece img');
-
-// Get the modal and the modal image element
-const modal = document.getElementById('imageModal');
-const modalImg = document.getElementById('modalImage');
-const modalClose = document.getElementById('closeModal');
-
-// Loop through all images and set up event listeners
-artPieceImages.forEach((image) => {
-    image.addEventListener('click', (event) => {
-        // Open the modal and set the clicked image as the modal content
-        modal.style.display = 'block';
-        modalImg.src = event.target.src;  // Set the src of the modal image to the clicked image's src
-        document.getElementById('caption').textContent = event.target.alt;  // Set the caption to the alt text of the image
+// Main JavaScript for website functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+        });
+    }
+    
+    // Close mobile menu when clicking on a link
+    const navLinkItems = document.querySelectorAll('.nav-links a');
+    navLinkItems.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+            }
+        });
     });
-});
-
-// Close the modal when the close button is clicked
-modalClose.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
-
-// Close the modal when clicking outside of the modal content
-window.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
+    
+    // Back to top button
+    const backToTopButton = document.getElementById('backToTop');
+    if (backToTopButton) {
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Skip for "#" links or lightbox controls
+            if (href === '#' || this.classList.contains('lightbox-close')) {
+                return;
+            }
+            
+            e.preventDefault();
+            
+            const targetId = href.substring(href.indexOf('#') + 1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Header animation on scroll
+    const header = document.getElementById('header');
+    if (header) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
     }
 });

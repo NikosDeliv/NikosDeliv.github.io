@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,7 +32,7 @@
 
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content box">
                 <h1>Nikos Delivos</h1>
                 <h2>Computer Science Student & Developer</h2>
                 <p>I'm a 3rd year Computer Science student at Democritus University of Thrace with aspirations to become a .NET developer/Software Engineer.</p>
@@ -56,11 +55,11 @@
             <div class="section-title">
                 <h2>About Me</h2>
             </div>
-            <div class="about-content">
-                <div class="about-image">
+            <div class="about-content flex-unequal">
+                <div class="about-image flex-item-unequal box">
                     <img src="/api/placeholder/400/400" alt="Nikos Delivos">
                 </div>
-                <div class="about-text">
+                <div class="about-text flex-item-unequal box">
                     <h3>Computer Science Student & Developer</h3>
                     <p>I'm a Computer Science student at Democritus University of Thrace, currently in my 3rd year of studies. My primary focus is becoming a proficient .NET developer and Software Engineer.</p>
                     <p>Beyond academics, I enjoy playing video games, creating pixel art, and continuously working on personal projects to expand my skillset. I'm enthusiastic about solving problems through code and developing intuitive software solutions.</p>
@@ -72,13 +71,13 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section skills">
+    <section id="skills" class="section">
         <div class="container">
             <div class="section-title">
                 <h2>My Skills</h2>
             </div>
             <div class="skills-container">
-                <div class="skill-category">
+                <div class="skill-category box">
                     <h3>Languages</h3>
                     <div class="skill-icons">
                         <div class="skill-icon">
@@ -110,36 +109,48 @@
                             <span>Python</span>
                         </div>
                     </div>
-                    </div>
-                    <div class="skill-category">
-                        <h3>Frameworks & Platforms</h3>
-                        <div class="skill-icons">
-                            <div class="skill-icon">
-                                <i class="fab fa-github"></i>
-                                <span>GitHub</span>
-                            </div>
-                            <div class="skill-icon">
-                                <i class="fab fa-git-alt"></i>
-                                <span>Git</span>
-                            </div>
-                            <div class="skill-icon">
-                                <i class="devicon-dotnetcore-plain"></i>
-                                <span>.NET Core</span>
-                            </div>
-                            <div class="skill-icon">
-                                <i class="fab fa-react"></i>
-                                <span>React</span>
-                            </div>
-                            <div class="skill-icon">
-                                <i class="fas fa-gamepad"></i>
-                                <span>Godot</span>
-                            </div>
-                            <div class="skill-icon">
-                                <i class="fab fa-bootstrap"></i>
-                                <span>Bootstrap</span>
-                            </div>
+                </div>
+                <div class="skill-category box">
+                    <h3>Frameworks & Platforms</h3>
+                    <div class="skill-icons">
+                        <div class="skill-icon">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="devicon-dotnetcore-plain"></i>
+                            <span>.NET Core</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fas fa-gamepad"></i>
+                            <span>Godot</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-bootstrap"></i>
+                            <span>Bootstrap</span>
                         </div>
                     </div>
+<<<<<<< HEAD
+                </div>
+                <div class="skill-category box">
+                    <h3>Tools & Other</h3>
+                    <div class="skill-icons">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>Aseprite</span>
+=======
                     <div class="skill-category">
                         <h3>Tools & Other</h3>
                         <div class="skill-icons">
@@ -151,8 +162,10 @@
                                 <i class="fas fa-paint-brush"></i>
                                 <span>Aseprite</span>
                             </div>
+>>>>>>> 71668e0f4e61440ed18a2e50058db885c130ca39
                         </div>
                     </div>
+                </div>
             </div>
         </div>
     </section>
@@ -163,8 +176,8 @@
             <div class="section-title">
                 <h2>My Projects</h2>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
+            <div class="projects-grid flex">
+                <div class="project-card flex-item box">
                     <div class="project-image">
                         <img src="assets/GlimmerDexIcon.png" alt="GlimmerDex Project">
                     </div>
@@ -182,7 +195,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card flex-item box">
                     <div class="project-image">
                         <img src="assets/PGDIcon.png" alt="Procedurally Generated Dungeons">
                     </div>
@@ -199,7 +212,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card flex-item box">
                     <div class="project-image">
                         <img src="assets/MorseIcon.png" alt="Morse Code Translator">
                     </div>
@@ -217,41 +230,43 @@
                         </div>
                     </div>
                 </div>
-               
-               
             </div>
             <div class="view-more">
                 <a href="allprojects.html" class="btn">View All Projects</a>
             </div>
-           
         </div>
     </section>
 
     <!-- Certificates Section -->
-    <section id="certificates" class="section certificates">
+  <section id="certificates" class="section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title box">
                 <h2>Certificates</h2>
             </div>
-            <div class="certificates-grid">
-                <!-- Add your Credly certificates here -->
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0bf7c814-1ac8-4eb9-aeae-4676f35b7a53" data-share-badge-host="https://www.credly.com"></div>
-                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="53a4946f-e053-4906-b78e-aea53a44bd4c" data-share-badge-host="https://www.credly.com"></div>
+            
+            <div class="box">
+                <div class="certificates-grid">
+                    <div class="certificate-box">
+                        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0bf7c814-1ac8-4eb9-aeae-4676f35b7a53" data-share-badge-host="https://www.credly.com"></div>
+                    </div>
+                    <div class="certificate-box">
+                        <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="53a4946f-e053-4906-b78e-aea53a44bd4c" data-share-badge-host="https://www.credly.com"></div>
+                    </div>
+                    </div>
             </div>
+            
             <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
         </div>
     </section>
 
- 
-
     <!-- Contact Section -->
-    <section id="contact" class="section contact">
+    <section id="contact" class="section">
         <div class="container">
             <div class="section-title">
                 <h2>Get In Touch</h2>
             </div>
-            <div class="contact-content">
-                <div class="contact-info">
+            <div class="contact-content flex-unequal">
+                <div class="contact-info flex-item-unequal box">
                     <h3>Let's Connect</h3>
                     <p>Feel free to reach out to me for collaborations, job opportunities, or just to say hello!</p>
                     <div class="contact-item">
@@ -267,7 +282,7 @@
                         <span>linkedin.com/in/nikosdelivos</span>
                     </div>
                 </div>
-                <div class="contact-form">
+                <div class="contact-form flex-item-unequal box">
                     <form id="contactForm">
                         <div class="form-group">
                             <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>

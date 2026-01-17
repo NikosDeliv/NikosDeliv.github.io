@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Pixel Art Gallery | Nikos Delivos</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Pixel Art Gallery of Nikos Delivos - Computer Science Student & Developer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Nikos Delivos</a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="navLinks" class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#certificates">Certificates</a>
+                <a href="pixelart.html" class="active">Pixel Art</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
 
-<header id="header">
-    <div class="header-container">
-        <a href="index.html" class="logo">Nikos Delivos</a>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="pixelart.html" class="active">Pixel Art</a>
-        </nav>
-    </div>
-</header>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Pixel Art Gallery</h1>
+            <p>A collection of pixel art works created by me</p>
+        </div>
+    </section>
 
-<section class="page-header">
-    <h1>Pixel Art Gallery</h1>
-    <p>A collection of pixel art works created by me</p>
-</section>
-
-<section class="section pixel-gallery-section">
-
-    <!-- Filters -->
-    <div class="filter-buttons">
-        <button class="filter-button active" data-filter="all">All</button>
-        <button class="filter-button" data-filter="pokemon">Pokémon</button>
-        <button class="filter-button" data-filter="character">Characters</button>
-        <button class="filter-button" data-filter="game">Game Assets</button>
-        <button class="filter-button" data-filter="other">Other</button>
-    </div>
+    <!-- Gallery Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <div class="filter-buttons">
+                    <button class="filter-button active" data-filter="all">All</button>
+                    <button class="filter-button" data-filter="pokemon">Pokémon</button>
+                    <button class="filter-button" data-filter="character">Characters</button>
+                    <button class="filter-button" data-filter="game">Game Assets</button>
+                    <button class="filter-button" data-filter="other">Other</button>
+                </div>
+            </div>
 
             <!-- Gallery Grid -->
             <div class="gallery-grid flex">
@@ -195,124 +210,117 @@
                 <div class="art-piece flex-item" data-img="assets/PixelArt/Orchidea_Animation_Mashup.gif" data-category="other">
     <div class="art-image">
         <img src="assets/PixelArt/Orchidea_Animation_Mashup.gif" alt="Orchidea Animation Mashup">
-    <!-- Gallery -->
-    <div class="gallery-grid">
-
-        <img src="assets/PixelArt/Bowtide_Spritesheet.png"
-             data-category="game"
-             data-title="Bowtide Sprites"
-             data-desc="Spritesheet for the Bowtide Terraria mod."
-             alt="Bowtide Sprites">
-
-        <img src="assets/PixelArt/Sableye.png"
-             data-category="pokemon"
-             data-title="Sableye"
-             data-desc="Pixel art of my favorite Pokémon."
-             alt="Sableye">
-
-        <img src="assets/PixelArt/El_Gato.png"
-             data-category="other"
-             data-title="El Gato"
-             data-desc="Limited palette pixel art cat."
-             alt="El Gato">
-
-        <img src="assets/PixelArt/EmRanNuz_Final.png"
-             data-category="pokemon"
-             data-title="Emerald Randomized Nuzlocke"
-             data-desc="Team memorial artwork."
-             alt="Emerald Nuzlocke">
-
-        <img src="assets/PixelArt/PlagueDoctor.png"
-             data-category="character"
-             data-title="Plague Doctor"
-             data-desc="Dark themed character study."
-             alt="Plague Doctor">
-
-        <img src="assets/PixelArt/Orchidea_Animation_Mashup.gif"
-             data-category="other"
-             data-title="Orchidea Animation Mashup"
-             data-desc="Looping pixel animation."
-             alt="Orchidea Animation">
-        
-         <img src="assets/PixelArt/Commission.png"
-             data-category="pokemon"
-             data-title="Emerald Randomized Nuzlocke"
-             data-desc="Team memorial artwork."
-             alt="Emerald Nuzlocke">
-        
-        <img src="assets/PixelArt/Commission2.png"
-             data-category="pokemon"
-             data-title="Emerald Randomized Nuzlocke"
-             data-desc="Team memorial artwork."
-             alt="Emerald Nuzlocke">
-
-        <img src="assets/PixelArt/Commission3.png"
-             data-category="pokemon"
-             data-title="Emerald Randomized Nuzlocke"
-             data-desc="Team memorial artwork."
-             alt="Emerald Nuzlocke">
     </div>
-</section>
-
-<!-- Modal -->
-<div class="modal" id="modal">
-    <span class="modal-close" id="modalClose">&times;</span>
-    <img id="modalImg">
-    <div class="modal-text">
-        <h2 id="modalTitle"></h2>
-        <p id="modalDesc"></p>
+    <div class="art-content">
+        <h3>Orchidea Animation Mashup</h3>
+        <p>A looping pixel animation mashup combining different animated elements into a cohesive scene.</p>
+        <div class="art-tags">
+            <span class="art-tag">Game Assets</span>
+            <span class="art-tag">Character</span>
+        </div>
+        <div class="art-meta">
+            <span><i class="fas fa-paint-brush"></i> Aseprite</span>
+        </div>
     </div>
 </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/NikosDeliv" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nikosdelivos" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:delivosnikos@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 Nikos Delivos. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    const buttons = document.querySelectorAll(".filter-button");
-    const images = document.querySelectorAll(".gallery-grid img");
-    const modal = document.getElementById("modal");
-    const modalImg = document.getElementById("modalImg");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalDesc = document.getElementById("modalDesc");
-    const modalClose = document.getElementById("modalClose");
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-    // Filtering
-    buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            buttons.forEach(b => b.classList.remove("active"));
-            btn.classList.add("active");
+    <!-- Modal for Image Display -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 
-            const filter = btn.dataset.filter;
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const artPieces = document.querySelectorAll('.art-piece');
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const closeModal = document.querySelector('.modal-close');
 
-            images.forEach(img => {
-                img.style.display =
-                    filter === "all" || img.dataset.category === filter
-                        ? "block"
-                        : "none";
+            // Filtering functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // Filter art pieces based on selected category
+                    artPieces.forEach(piece => {
+                        const category = piece.getAttribute('data-category');
+
+                        if (filterValue === 'all' || category === filterValue) {
+                            piece.style.display = 'block';
+                            setTimeout(() => {
+                                piece.style.opacity = '1';
+                                piece.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            piece.style.opacity = '0';
+                            piece.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                piece.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+
+            // Modal functionality for image display
+            document.querySelectorAll('.art-image img').forEach(img => {
+                img.addEventListener('click', function () {
+                    const fullSizeImg = this.closest('.art-piece').getAttribute('data-img');
+                    if (fullSizeImg) {
+                        modal.style.display = 'flex';
+                        modalImage.src = fullSizeImg;
+                    }
+                });
+            });
+
+            closeModal.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+
+            window.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
             });
         });
-    });
-
-    // Modal
-    images.forEach(img => {
-        img.addEventListener("click", () => {
-            modal.style.display = "flex";
-            modalImg.src = img.src;
-            modalTitle.textContent = img.dataset.title;
-            modalDesc.textContent = img.dataset.desc;
-        });
-    });
-
-    modalClose.addEventListener("click", () => {
-        modal.style.display = "none";
-    });
-
-    modal.addEventListener("click", e => {
-        if (e.target === modal) modal.style.display = "none";
-    });
-
-});
-</script>
-
+    </script>
 </body>
 
 </html>

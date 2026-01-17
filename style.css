@@ -481,8 +481,8 @@ small {
 .projects-grid {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 1rem; /* CHANGED: Reduced spacing */
-    row-gap: 1rem; /* CHANGED: Reduced spacing */
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 .project-card {
@@ -823,128 +823,81 @@ footer {
     color: var(--underline);
 }
 
-/* ===================================
-   PIXEL ART GALLERY
-   =================================== */
+.pixel-gallery-section {
+    background: transparent;
+}
 
 .gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 1.3rem;
-    row-gap: 1.3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
-.art-piece {
-    background: var(--bg2);
-    border: var(--border-style);
-    filter: var(--drop-shadow-style);
-    transition: opacity .3s, transform .3s;
-    flex: 1 1 15rem;
-    min-width: 15rem;
-}
-
-.art-image {
-    overflow: hidden;
-    border-bottom: var(--border-style);
-    cursor: pointer;
-}
-
-.art-image img {
+.gallery-grid img {
     width: 100%;
-    height: 250px;
-    object-fit: contain;
-    display: block;
-    background: var(--bg1);
+    height: auto;
+    cursor: pointer;
     image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
 }
 
-.art-content {
-    padding: 1rem;
-}
+/* ===============================
+   FILTERS
+   =============================== */
 
-.art-content h3 {
-    font-size: 1.15rem;
-    margin-bottom: .5rem;
-}
-
-.art-content p {
-    margin: .5rem 0;
-    font-size: .95rem;
-}
-
-.art-tags {
+.filter-buttons {
     display: flex;
+    gap: .75rem;
     flex-wrap: wrap;
-    gap: .5rem;
-    margin: 1rem 0;
+    justify-content: center;
 }
 
-.art-tag {
-    padding: .25rem .75rem;
-    background: var(--h1-bg);
-    border: var(--border-style);
-    font-size: .85rem;
-    font-family: var(--header);
-    letter-spacing: var(--h1-letter-spacing);
-}
 
-.art-meta {
-    font-size: .85rem;
-    color: var(--underline);
-    margin-top: .5rem;
-}
 
-@media only screen and (max-width: 680px) {
-    .gallery-grid {
-        flex-direction: column;
-    }
-    .art-piece {
-        min-width: 100%;
-    }
-}
-
-/* ===================================
+/* ===============================
    MODAL
-   =================================== */
+   =============================== */
 
 .modal {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    inset: 0;
+    background: rgba(0,0,0,.95);
     z-index: 1000;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-.modal.show {
-    display: flex;
+.modal img {
+    max-width: 90%;
+    max-height: 80vh;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.modal-text {
+    max-width: 600px;
+    text-align: center;
+    margin-top: 1rem;
+    color: #ccc;
+}
+
+.modal-text h2 {
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
 }
 
 .modal-close {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
-    font-size: 3rem;
-    color: var(--text);
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #ccc;
     cursor: pointer;
-    z-index: 1001;
 }
 
-.modal-content,
-.modal-image {
-    max-width: 90%;
-    max-height: 90vh;
-    border: var(--border-style);
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-}
 
 /* ===================================
    RESPONSIVE DESIGN

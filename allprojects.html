@@ -7,6 +7,7 @@
     <meta name="description" content="All projects by Nikos Delivos - Computer Science Student & Developer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -29,232 +30,219 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>All Projects</h1>
-            <p>A collection of all my programming and development projects</p>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section all-projects">
-        <div class="container">
-            <div class="filter-container">
-                <div class="filter-buttons">
-                    <button class="filter-button active" data-filter="all">All</button>
-                    <button class="filter-button" data-filter=".net">C# / .NET</button>
-                    <button class="filter-button" data-filter="web">Web Development</button>
-                    <button class="filter-button" data-filter="game">Game Development</button>
-                    <button class="filter-button" data-filter="python">Python</button>
+    <!-- Main Unified Grid Container (Sweetfish Layout Style) -->
+    <main class="section unified-dashboard">
+        <div class="grid-layout">
+            
+            <!-- Page Header Box (Full Width) -->
+            <div class="box span-full">
+                <h1>All Projects</h1>
+                <p>A collection of all my programming and development projects</p>
+                
+                <!-- Filter Controls Inside Header Box Container -->
+                <div class="filter-container" style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+                    <button class="btn filter-button active" data-filter="all">All</button>
+                    <button class="btn btn-secondary filter-button" data-filter=".net">C# / .NET</button>
+                    <button class="btn btn-secondary filter-button" data-filter="web">Web Development</button>
+                    <button class="btn btn-secondary filter-button" data-filter="game">Game Development</button>
+                    <button class="btn btn-secondary filter-button" data-filter="python">Python</button>
                 </div>
             </div>
 
-            <div class="projects-grid flex">
-                <!-- Project 1 -->
-                <div class="project-card flex-item" data-category=".net">
-                    <div class="project-image">
-                        <img src="assets/GlimmerDexIcon.png" alt="GlimmerDex Project">
-                    </div>
-                    <div class="project-content">
-                        <h3>GlimmerDex</h3>
-                        <p>A Shiny hunting companion app that helps players track their encounter counts while shiny hunting in Pokémon games.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">C#</span>
-                            <span class="project-tag">.NET</span>
-                            <span class="project-tag">Desktop App</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/NikosDeliv/GlimmerDex" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-                            <a href="https://nico18n3.itch.io/glimmerdex" target="_blank"><i class="fab fa-itch-io"></i> Download</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card flex-item" data-category=".net game">
-                    <div class="project-image">
-                        <img src="assets/PGDIcon.png" alt="Procedurally Generated Dungeons">
-                    </div>
-                    <div class="project-content">
-                        <h3>Procedurally Generated Dungeons</h3>
-                        <p>A tool to help you generate new dungeon layouts for your game development needs. Implements multiple procedural generation algorithms.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">C#</span>
-                            <span class="project-tag">Algorithms</span>
-                            <span class="project-tag">Game Dev</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/NikosDeliv/ProcedurallyGeneratedDungeon" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+            <!-- Consolidated Projects Feed Container (Full Width containing its own internal grid) -->
+            <div class="box span-full" style="background: transparent; border: none; filter: none; padding: 0;">
+                <div class="projects-inline-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem;">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-mini-card project-card" data-category=".net" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-image"><img src="assets/GlimmerDexIcon.png" alt="GlimmerDex Project"></div>
+                        <div class="project-content">
+                            <h3>GlimmerDex</h3>
+                            <p>A Shiny hunting companion app that helps players track their encounter counts while shiny hunting in Pokémon games.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">.NET</span>
+                                <span class="project-tag">Desktop App</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NikosDeliv/GlimmerDex" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="https://nico18n3.itch.io/glimmerdex" target="_blank"><i class="fab fa-itch-io"></i> Download</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card flex-item" data-category="web">
-                    <div class="project-image">
-                        <img src="assets/MorseIcon.png" alt="Morse Code Translator">
-                    </div>
-                    <div class="project-content">
-                        <h3>Morse Code Translator</h3>
-                        <p>Convert text to morse code and vice versa with audio playback functionality. Features a clean, responsive interface.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/NikosDeliv/Morse-Code-Translator" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-                            <a href="https://nikosdeliv.github.io/Morse-Code-Translator/" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-mini-card project-card" data-category=".net game" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-image"><img src="assets/PGDIcon.png" alt="Procedurally Generated Dungeons"></div>
+                        <div class="project-content">
+                            <h3>Procedurally Generated Dungeons</h3>
+                            <p>A tool to help you generate new dungeon layouts for your game development needs. Implements multiple procedural generation algorithms.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">Algorithms</span>
+                                <span class="project-tag">Game Dev</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NikosDeliv/ProcedurallyGeneratedDungeon" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="project-card flex-item" data-category="web">
-                    <div class="project-image">
-                        <img src="assets/URPSIcon.png" alt="Ultimate Rock Paper Scissors">
-                    </div>
-                    <div class="project-content">
-                        <h3>Ultimate Rock Paper Scissors</h3>
-                        <p>Rock Paper Scissors game with a twist - featuring expanded gameplay elements and an extended set of choices.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">JavaScript</span>
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/NikosDeliv/Ultimate-Rock-Paper-Scissors" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-                            <a href="https://nikosdeliv.github.io/Ultimate-Rock-Paper-Scissors/" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-mini-card project-card" data-category="web" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-image"><img src="assets/MorseIcon.png" alt="Morse Code Translator"></div>
+                        <div class="project-content">
+                            <h3>Morse Code Translator</h3>
+                            <p>Convert text to morse code and vice versa with audio playback functionality. Features a clean, responsive interface.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NikosDeliv/Morse-Code-Translator" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="https://nikosdeliv.github.io/Morse-Code-Translator/" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Project 5 -->
-                <div class="project-card flex-item" data-category=".net game">
-                    <div class="project-image">
-                        <img src="assets/BowtideIcon.png" alt="Bowtide Terraria Mod">
-                    </div>
-                    <div class="project-content">
-                        <h3>Bowtide</h3>
-                        <p>A work-in-progress Terraria mod that adds various bows, arrows, and accessories to the game. Designed to enhance the ranged gameplay.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">C#</span>
-                            <span class="project-tag">TmodLoader</span>
-                            <span class="project-tag">Game Mod</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3516601017" target="_blank"><i class="fas fa-gamepad"></i> Steam Workshop</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 6 -->
-                <div class="project-card flex-item" data-category="python">
-                    <div class="project-content">
-                        <h3>Digital Frame</h3>
-                        <p>A script that replicates a digital photo frame, displaying pictures and changing them every few seconds. Customizable transition effects.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Python</span>
-                            <span class="project-tag">Automation</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/NikosDeliv/DigitalFrame" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-mini-card project-card" data-category="web" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-image"><img src="assets/URPSIcon.png" alt="Ultimate Rock Paper Scissors"></div>
+                        <div class="project-content">
+                            <h3>Ultimate Rock Paper Scissors</h3>
+                            <p>Rock Paper Scissors game with a twist - featuring expanded gameplay elements and an extended set of choices.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NikosDeliv/Ultimate-Rock-Paper-Scissors" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="https://nikosdeliv.github.io/Ultimate-Rock-Paper-Scissors/" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-mini-card project-card" data-category=".net game" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-image"><img src="assets/BowtideIcon.png" alt="Bowtide Terraria Mod"></div>
+                        <div class="project-content">
+                            <h3>Bowtide</h3>
+                            <p>A work-in-progress Terraria mod that adds various bows, arrows, and accessories to the game. Designed to enhance the ranged gameplay.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">TmodLoader</span>
+                                <span class="project-tag">Game Mod</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3516601017" target="_blank"><i class="fas fa-gamepad"></i> Steam Workshop</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="project-mini-card project-card" data-category="python" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-content" style="padding-top: 0.85rem;">
+                            <h3>Digital Frame</h3>
+                            <p>A script that replicates a digital photo frame, displaying pictures and changing them every few seconds. Customizable transition effects.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Python</span>
+                                <span class="project-tag">Automation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NikosDeliv/DigitalFrame" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Project 7 -->
-                <div class="project-card flex-item" data-category=".net">
-                    <div class="project-image">
-                        <img src="assets/ScoundrelIcon.png" alt="Scoundrel">
-                    </div>
-                    <div class="project-content">
-                        <h3>Scoundrel - Dungeon Crawler</h3>
-                        <p>A game played on the PC's console based on the card game Scoundrel.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">C#</span>
-                            <span class="project-tag">.NET Core</span>
-                            <span class="project-tag">WPF</span>
+                    <!-- Project 7 -->
+                    <div class="project-mini-card project-card" data-category=".net" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-image"><img src="assets/ScoundrelIcon.png" alt="Scoundrel"></div>
+                        <div class="project-content">
+                            <h3>Scoundrel - Dungeon Crawler</h3>
+                            <p>A game played on the PC's console based on the card game Scoundrel.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">.NET Core</span>
+                                <span class="project-tag">WPF</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NikosDeliv/ScoundrelDungeonCrawler" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/NikosDeliv/ScoundrelDungeonCrawler" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
                     </div>
-                </div>
 
-                <!-- Project 8 -->
-                <div class="project-card flex-item" data-category="web">
-                    <div class="project-content">
-                        <h3>Personal Portfolio Website</h3>
-                        <p>This portfolio website showcasing my projects, skills, and artwork. Built with responsive design principles.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/NikosDeliv/NikosDeliv.github.io" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                    <!-- Project 8 -->
+                    <div class="project-mini-card project-card" data-category="web" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-content" style="padding-top: 0.85rem;">
+                            <h3>Personal Portfolio Website</h3>
+                            <p>This portfolio website showcasing my projects, skills, and artwork. Built with responsive design principles.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NikosDeliv/NikosDeliv.github.io" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Project 9 -->
-                <div class="project-card flex-item" data-category="web">
-                    <div class="project-image">
-                        <img src="assets/OrchideaIcon.png" alt="Orchidea - Desktop Pet">
-                    </div>
-                    <div class="project-content">
-                        <h3>Orchidea - Desktop Pet</h3>
-                        <p>An orchid mantis desktop pet to keep you company when you're working on stuff.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">C#</span>
-                            <span class="project-tag">Game Dev</span>
-                            <span class="project-tag">Automation</span>
+                    <!-- Project 9 -->
+                    <div class="project-mini-card project-card" data-category="web" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-image"><img src="assets/OrchideaIcon.png" alt="Orchidea - Desktop Pet"></div>
+                        <div class="project-content">
+                            <h3>Orchidea - Desktop Pet</h3>
+                            <p>An orchid mantis desktop pet to keep you company when you're working on stuff.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">Game Dev</span>
+                                <span class="project-tag">Automation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://nico18n3.itch.io/orchidea-a-desktop-pet" target="_blank"><i class="fab fa-itch-io"></i> Download</a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://nico18n3.itch.io/orchidea-a-desktop-pet" target="_blank"><i class="fab fa-itch-io"></i> Download</a>
-                        </div>
                     </div>
-                </div>
 
-                  <!-- Project 10 -->
-                <div class="project-card flex-item" data-category=".net">
-                    <div class="project-image">
-                        <img src="assets/RetroHubIcon.png" alt="RetroHub">
-                    </div>
-                    <div class="project-content">
-                        <h3>RetroHub</h3>
-                        <p>A ROM library manager for organizing and launching retro games with their respective emulators. Features drag-and-drop support and a grid based interface.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">C#</span>
-                            <span class="project-tag">DataBase</span>
+                    <!-- Project 10 -->
+                    <div class="project-mini-card project-card" data-category=".net" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-image"><img src="assets/RomHubIcon.png" alt="RomHub"></div>
+                        <div class="project-content">
+                            <h3>RomHub</h3>
+                            <p>A ROM library manager for organizing and launching retro games with their respective emulators. Features drag-and-drop support and a grid based interface.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">C#</span>
+                                <span class="project-tag">DataBase</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NikosDeliv/RomHub" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/NikosDeliv/RetroHub" target="_blank"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
                     </div>
-                </div>
 
-                 <div class="project-card flex-item" data-category=".net">
-                    <div class="project-image">
-                        <img src="assets/AoAIcon.png" alt="ApothecaryofAshes">
-                    </div>
-                    <div class="project-content">
-                        <h3>Apothecary of Ashes</h3>
-                        <p>A game I saw in a dream of mine and decided to give form to.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Godot</span>
-                            <span class="project-tag">Game Dev</span>
+                    <!-- Project 11 -->
+                    <div class="project-mini-card project-card" data-category=".net" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-image"><img src="assets/AoAIcon.png" alt="ApothecaryofAshes"></div>
+                        <div class="project-content">
+                            <h3>Apothecary of Ashes</h3>
+                            <p>A game I saw in a dream of mine and decided to give form to.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Godot</span>
+                                <span class="project-tag">Game Dev</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://peaveepeanut.itch.io/apothecary-of-ashes" target="_blank"><i class="fab fa-itch-io"></i> Download</a>
+                            </div>
                         </div>
-                        <div class="project-links">
-                            <a href="https://peaveepeanut.itch.io/apothecary-of-ashes" target="_blank"><i class="fab fa-itch-io"></i>Download</a>
-                        </div>
                     </div>
+
                 </div>
             </div>
+
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -266,12 +254,12 @@
                 <a href="#">Projects</a>
                 <a href="index.html#contact">Contact</a>
             </div>
-            <div class="footer-social">
+            <div class="footer-social" style="margin-top: 0.5rem; display: flex; gap: 1rem; justify-content: center; font-size: 1.2rem;">
                 <a href="https://github.com/NikosDeliv" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/nikosdelivos" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:delivosnikos@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
-            <p class="copyright">&copy; 2025 Nikos Delivos. All Rights Reserved.</p>
+            <p class="copyright" style="margin-top: 0.5rem;">&copy; 2026 Nikos Delivos. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -283,18 +271,19 @@
     <!-- Scripts -->
     <script src="script.js"></script>
     <script>
-        // Project filtering functionality
         document.addEventListener('DOMContentLoaded', function() {
             const filterButtons = document.querySelectorAll('.filter-button');
             const projectCards = document.querySelectorAll('.project-card');
             
             filterButtons.forEach(button => {
                 button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                        btn.classList.add('btn-secondary');
+                    });
                     
-                    // Add active class to clicked button
                     this.classList.add('active');
+                    this.classList.remove('btn-secondary');
                     
                     const filterValue = this.getAttribute('data-filter');
                     
@@ -302,23 +291,22 @@
                         const categories = card.getAttribute('data-category');
                         
                         if (filterValue === 'all' || categories.includes(filterValue)) {
-                            card.style.display = 'block';
+                            card.style.display = 'flex';
                             setTimeout(() => {
                                 card.style.opacity = '1';
                                 card.style.transform = 'translateY(0)';
-                            }, 100);
+                            }, 50);
                         } else {
                             card.style.opacity = '0';
-                            card.style.transform = 'translateY(20px)';
+                            card.style.transform = 'translateY(10px)';
                             setTimeout(() => {
                                 card.style.display = 'none';
-                            }, 300);
+                            }, 150);
                         }
                     });
                 });
             });
         });
     </script>
-    
 </body>
 </html>

@@ -13,14 +13,14 @@
     
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header id="header">
         <div class="container header-container">
             <a href="#" class="logo">Nikos Delivos</a>
-            <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
-            <nav id="navLinks" class="nav-links">
+            </button>
+            <nav id="navLinks" class="nav-links" aria-label="Main navigation">
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
@@ -32,11 +32,9 @@
         </div>
     </header>
 
-    <!-- Main Unified Grid Container (Sweetfish Layout Style) -->
-    <main class="section unified-dashboard">
+    <main id="main-content" class="section unified-dashboard">
         <div class="grid-layout">
 
-            <!-- Home Hero Box (Full Width Top) -->
             <div id="home" class="box span-full">
                 <h1>Nikos Delivos</h1>
                 <h2>Computer Science Student & Developer</h2>
@@ -46,15 +44,14 @@
                     <a href="#contact" class="btn btn-secondary">Contact Me</a>
                 </div>
                 <div class="social-links" style="margin-top: 1rem;">
-                    <a href="https://github.com/NikosDeliv" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="http://peaveepeanut.itch.io/" target="_blank"><i class="fab fa-itch-io"></i></a>
-                    <a href="https://www.linkedin.com/in/nikosdelivos" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="mailto:delivosnikos@gmail.com"><i class="fas fa-envelope"></i></a>
-                    <a href="https://www.instagram.com/delivos.n"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/NikosDeliv" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="http://peaveepeanut.itch.io/" target="_blank" rel="noopener noreferrer" aria-label="itch.io"><i class="fab fa-itch-io" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/nikosdelivos" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="mailto:delivosnikos@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/delivos.n" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
 
-            <!-- About Me Box (Left Column) -->
             <div id="about" class="box">
                 <h3>About Me</h3>
                 <strong>Computer Science Student & Developer</strong>
@@ -66,7 +63,6 @@
                 </div>
             </div>
 
-            <!-- Work Experience Box (Right Column) -->
             <div id="experience" class="box">
                 <h3>Work Experience</h3>
                 <strong>Information Technology Technician (Intern)</strong>
@@ -81,7 +77,6 @@
                 <p>Developing personal projects in .NET Core and C#, contributing to open-source software, and expanding specialized skill sets in software engineering.</p>
             </div>
 
-            <!-- Skills Box (Full Width Row) -->
             <div id="skills" class="box span-full">
                 <h3>My Skills</h3>
                 <div class="skills-inline-grid">
@@ -120,11 +115,9 @@
                 </div>
             </div>
 
-            <!-- Projects Box (Full Width Row) -->
             <div id="projects" class="box span-full">
                 <h3>My Projects</h3>
                 <div class="projects-inline-grid">
-                    <!-- Project 1 -->
                     <div class="project-mini-card">
                         <div class="project-image"><img src="assets/GlimmerDexIcon.png" alt="GlimmerDex Project"></div>
                         <div class="project-content">
@@ -141,7 +134,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Project 2 -->
                     <div class="project-mini-card">
                         <div class="project-image"><img src="assets/RomHubIcon.png" alt="RomHub"></div>
                         <div class="project-content">
@@ -157,7 +149,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Project 3 -->
                     <div class="project-mini-card">
                         <div class="project-image"><img src="assets/MorseIcon.png" alt="Morse Code Translator"></div>
                         <div class="project-content">
@@ -180,7 +171,6 @@
                 </div>
             </div>
 
-            <!-- Certificates Box (Left Column) -->
             <div id="certificates" class="box">
                 <h3>Certificates</h3>
                 <div class="certificates-grid">
@@ -194,7 +184,6 @@
                 <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
             </div>
 
-            <!-- Contact Box (Right Column) -->
             <div id="contact" class="box">
                 <h3>Get In Touch</h3>
                 <strong>Let's Connect</strong>
@@ -205,18 +194,22 @@
                     <div><i class="fab fa-linkedin"></i> <span>linkedin.com/in/nikosdelivos</span></div>
                 </div>
                 <form id="contactForm" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" autocomplete="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" autocomplete="email" required>
+                    <label for="subject">Subject</label>
                     <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                    <label for="message">Message</label>
                     <textarea id="message" name="message" class="form-control" placeholder="Your Message" style="min-height: 80px;" required></textarea>
                     <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    <p id="contactStatus" class="form-status" role="status" aria-live="polite"></p>
                 </form>
             </div>
 
         </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container footer-content">
             <div class="footer-links">
@@ -231,15 +224,10 @@
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <a href="#home" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
 
     <script src="script.js"></script>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 39553f9c5dd9337de5f98d69ef56dd7508f1a5e0

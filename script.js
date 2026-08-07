@@ -1,6 +1,4 @@
-// Main JavaScript for website functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
     
@@ -8,21 +6,41 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileMenuBtn.addEventListener('click', function() {
             navLinks.classList.toggle('active');
             mobileMenuBtn.classList.toggle('active');
+            mobileMenuBtn.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+            mobileMenuBtn.setAttribute('aria-label', navLinks.classList.contains('active') ? 'Close navigation menu' : 'Open navigation menu');
         });
     }
     
-    // Close mobile menu when clicking on a link
     const navLinkItems = document.querySelectorAll('.nav-links a');
     navLinkItems.forEach(link => {
         link.addEventListener('click', function() {
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
                 mobileMenuBtn.classList.remove('active');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                mobileMenuBtn.setAttribute('aria-label', 'Open navigation menu');
             }
         });
     });
+
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(contactForm);
+            const name = formData.get('name').trim();
+            const email = formData.get('email').trim();
+            const subject = formData.get('subject').trim();
+            const message = formData.get('message').trim();
+            const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+            const contactStatus = document.getElementById('contactStatus');
+
+            window.location.href = `mailto:delivosnikos@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            contactStatus.textContent = 'Your email app should open with the message ready to send.';
+        });
+    }
     
-    // Back to top button
     const backToTopButton = document.getElementById('backToTop');
     if (backToTopButton) {
         window.addEventListener('scroll', function() {
@@ -42,12 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
-            // Skip for "#" links or lightbox controls
             if (href === '#' || this.classList.contains('lightbox-close')) {
                 return;
             }
@@ -70,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Header animation on scroll
     const header = document.getElementById('header');
     if (header) {
         window.addEventListener('scroll', function() {

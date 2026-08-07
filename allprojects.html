@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header id="header">
         <div class="container header-container">
             <a href="index.html" class="logo">Nikos Delivos</a>
-            <div class="mobile-menu-btn" id="mobileMenuBtn">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false">
                 <i class="fas fa-bars"></i>
-            </div>
-            <nav id="navLinks" class="nav-links">
+            </button>
+            <nav id="navLinks" class="nav-links" aria-label="Main navigation">
                 <a href="index.html">Home</a>
                 <a href="index.html#about">About</a>
                 <a href="index.html#skills">Skills</a>
@@ -29,31 +29,19 @@
         </div>
     </header>
 
-    <!-- Main Unified Grid Container (Sweetfish Layout Style) -->
-    <main class="section unified-dashboard">
+    <main id="main-content" class="section unified-dashboard">
         <div class="grid-layout">
             
-            <!-- Page Header Box (Full Width) -->
             <div class="box span-full">
                 <h1>All Projects</h1>
                 <p>A collection of all my programming and development projects</p>
                 
-                <!-- Filter Controls Inside Header Box Container -->
-                <div class="filter-container" style="margin-top: 1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
-                    <button class="btn filter-button active" data-filter="all">All</button>
-                    <button class="btn btn-secondary filter-button" data-filter=".net">C# / .NET</button>
-                    <button class="btn btn-secondary filter-button" data-filter="web">Web Development</button>
-                    <button class="btn btn-secondary filter-button" data-filter="game">Game Development</button>
-                    <button class="btn btn-secondary filter-button" data-filter="python">Python</button>
-                </div>
             </div>
 
-            <!-- Consolidated Projects Feed Container (Full Width containing its own internal grid) -->
             <div class="box span-full" style="background: transparent; border: none; filter: none; padding: 0;">
                 <div class="projects-inline-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.85rem;">
                     
-                    <!-- Project 1 -->
-                    <div class="project-mini-card project-card" data-category=".net" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                    <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
                         <div class="project-image"><img src="assets/GlimmerDexIcon.png" alt="GlimmerDex Project"></div>
                         <div class="project-content">
                             <h3>GlimmerDex</h3>
@@ -70,8 +58,7 @@
                         </div>
                     </div>
                     
-                    <!-- Project 2 -->
-                    <div class="project-mini-card project-card" data-category=".net game" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                    <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
                         <div class="project-image"><img src="assets/PGDIcon.png" alt="Procedurally Generated Dungeons"></div>
                         <div class="project-content">
                             <h3>Procedurally Generated Dungeons</h3>
@@ -87,8 +74,7 @@
                         </div>
                     </div>
                     
-                    <!-- Project 3 -->
-                    <div class="project-mini-card project-card" data-category="web" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                    <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
                         <div class="project-image"><img src="assets/MorseIcon.png" alt="Morse Code Translator"></div>
                         <div class="project-content">
                             <h3>Morse Code Translator</h3>
@@ -105,8 +91,7 @@
                         </div>
                     </div>
                     
-                    <!-- Project 4 -->
-                    <div class="project-mini-card project-card" data-category="web" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                    <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
                         <div class="project-image"><img src="assets/URPSIcon.png" alt="Ultimate Rock Paper Scissors"></div>
                         <div class="project-content">
                             <h3>Ultimate Rock Paper Scissors</h3>
@@ -123,8 +108,7 @@
                         </div>
                     </div>
                     
-                    <!-- Project 5 -->
-                    <div class="project-mini-card project-card" data-category=".net game" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                    <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
                         <div class="project-image"><img src="assets/BowtideIcon.png" alt="Bowtide Terraria Mod"></div>
                         <div class="project-content">
                             <h3>Bowtide</h3>
@@ -140,8 +124,7 @@
                         </div>
                     </div>
                     
-                    <!-- Project 6 -->
-                    <div class="project-mini-card project-card" data-category="python" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                    <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
                         <div class="project-content" style="padding-top: 0.85rem;">
                             <h3>Digital Frame</h3>
                             <p>A script that replicates a digital photo frame, displaying pictures and changing them every few seconds. Customizable transition effects.</p>
@@ -155,8 +138,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 7 -->
-                    <div class="project-mini-card project-card" data-category=".net" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                    <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
                         <div class="project-image"><img src="assets/ScoundrelIcon.png" alt="Scoundrel"></div>
                         <div class="project-content">
                             <h3>Scoundrel - Dungeon Crawler</h3>
@@ -172,8 +154,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 8 -->
-                    <div class="project-mini-card project-card" data-category="web" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                    <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
                         <div class="project-content" style="padding-top: 0.85rem;">
                             <h3>Personal Portfolio Website</h3>
                             <p>This portfolio website showcasing my projects, skills, and artwork. Built with responsive design principles.</p>
@@ -188,8 +169,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 9 -->
-                    <div class="project-mini-card project-card" data-category="web" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                    <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
                         <div class="project-image"><img src="assets/OrchideaIcon.png" alt="Orchidea - Desktop Pet"></div>
                         <div class="project-content">
                             <h3>Orchidea - Desktop Pet</h3>
@@ -205,8 +185,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 10 -->
-                    <div class="project-mini-card project-card" data-category=".net" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                    <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
                         <div class="project-image"><img src="assets/RomHubIcon.png" alt="RomHub"></div>
                         <div class="project-content">
                             <h3>RomHub</h3>
@@ -221,9 +200,9 @@
                         </div>
                     </div>
 
-                 <div class="project-mini-card project-card" data-category=".net game" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
                     <div class="project-image">
-                        <img src="assets/AoAIcon.png" alt="ApothecaryofAshes">
+                        <img src="assets/AoAIcon.png" alt="Apothecary of Ashes">
                     </div>
                     <div class="project-content">
                         <h3>Apothecary of Ashes</h3>
@@ -238,12 +217,27 @@
                     </div>
 
                 </div>
+
+                    <div class="project-mini-card" style="background: var(--bg2); border: var(--border-style); filter: var(--drop-shadow-style);">
+                        <div class="project-content">
+                            <h3>Art Portfolio</h3>
+                            <p>A collection of my digital art pieces, and where people can request commissions.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/NikosDeliv/ArtPortfolio" target="_blank"><i class="fab fa-github"></i> Source Code</a>
+                                <a href="https://nikosdeliv.github.io/ArtPortfolio/" target="_blank"><i class="fas fa-globe"></i> Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
             </div>
 
         </div>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="container footer-content">
             <div class="footer-links">
@@ -254,58 +248,18 @@
                 <a href="index.html#contact">Contact</a>
             </div>
             <div class="footer-social" style="margin-top: 0.5rem; display: flex; gap: 1rem; justify-content: center; font-size: 1.2rem;">
-                <a href="https://github.com/NikosDeliv" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/nikosdelivos" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="mailto:delivosnikos@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/NikosDeliv" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/nikosdelivos" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="mailto:delivosnikos@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
             </div>
             <p class="copyright" style="margin-top: 0.5rem;">&copy; 2026 Nikos Delivos. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
     <a href="#" class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </a>
 
-    <!-- Scripts -->
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-button');
-            const projectCards = document.querySelectorAll('.project-card');
-            
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    filterButtons.forEach(btn => {
-                        btn.classList.remove('active');
-                        btn.classList.add('btn-secondary');
-                    });
-                    
-                    this.classList.add('active');
-                    this.classList.remove('btn-secondary');
-                    
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    projectCards.forEach(card => {
-                        const categories = card.getAttribute('data-category');
-                        
-                        if (filterValue === 'all' || categories.includes(filterValue)) {
-                            card.style.display = 'flex';
-                            setTimeout(() => {
-                                card.style.opacity = '1';
-                                card.style.transform = 'translateY(0)';
-                            }, 50);
-                        } else {
-                            card.style.opacity = '0';
-                            card.style.transform = 'translateY(10px)';
-                            setTimeout(() => {
-                                card.style.display = 'none';
-                            }, 150);
-                        }
-                    });
-                });
-            });
-        });
-    </script>
 </body>
 </html>
